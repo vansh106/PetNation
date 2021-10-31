@@ -88,8 +88,8 @@ public class ActivitySignUp extends AppCompatActivity {
                         if(task.isSuccessful()){
                             Toast.makeText(ActivitySignUp.this, "User registered!", Toast.LENGTH_SHORT).show();
                             User user = new User(name,email,phone);
-                            FirebaseDatabase.getInstance().getReference("users")
-                            .child(mAuth.getCurrentUser().getUid()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            //FirebaseDatabase.getInstance().getReference("users")
+                           // .child(mAuth.getCurrentUser().getUid()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if(task.isSuccessful()){
